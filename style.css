@@ -67,6 +67,12 @@ body {
     align-items: center;
     gap: 20px;
     margin-bottom: 10px;
+    position: relative;
+}
+
+.theme-icon {
+    position: absolute;
+    right: 0;
 }
 
 .header h1 {
