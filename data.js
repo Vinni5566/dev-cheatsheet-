@@ -89,45 +89,13 @@ var cheatsheetData = [
   {
     title: "Remove File",
     category: "terminal",
-    description: "Delete a file from the directory",
-    code: "rm filename",
-  },
-  {
-    title: "React useState Hook",
-    category: "react",
-    description: "Manage state inside a functional component using useState",
-    code: "const [count, setCount] = useState(0);",
-  },
-  {
-    title: "React useEffect Hook",
-    category: "react",
-    description: "Run side effects like fetching data when component mounts",
-    code: "useEffect(() => {\n  fetchData();\n}, []);",
-  },
-  {
-    title: "React Props",
-    category: "react",
-    description:
-      "Pass data from parent component to child component using props",
-    code: "function Greeting({ name }) {\n  return <h1>Hello, {name}!</h1>;\n}",
-  },
-  {
-    title: "React Map List",
-    category: "react",
-    description: "Render a list of items dynamically using the map function",
-    code: "fruits.map((fruit) => (\n  <li key={fruit}>{fruit}</li>\n));",
-  },
-  {
-    title: "React Conditional Rendering",
-    category: "react",
-    description: "Show or hide elements based on a condition in React",
-    code: "{isLoggedIn ? <h2>Welcome!</h2> : <h2>Please log in.</h2>}",
-  },
-  {
-    title: "React Custom Hook",
-    category: "react",
-    description:
-      "Create a reusable custom hook to share logic across components",
-    code: "function useWindowWidth() {\n  const [width, setWidth] = useState(window.innerWidth);\n  useEffect(() => {\n    window.addEventListener('resize', () =>\n      setWidth(window.innerWidth));\n  }, []);\n  return width;\n}",
-  },
+    description: "Clear the terminal screen",
+    code: "clear"
+   },
+   {
+        title: "Git View Status",
+        category: "git",
+        description: "Check the current state of your repository including staged and unstaged changes.",
+        code: "git status"
+    }
 ];

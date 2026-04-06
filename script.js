@@ -83,7 +83,8 @@ function filterAndRenderCards() {
 
 // render cards to the dom
 function renderCards(cardsToRender) {
-    // clear the container
+    var resultsCount = document.getElementById('resultCount');
+    resultsCount.textContent = `Showing ${cardsToRender.length} of ${cheatsheetData.length} cheatsheets`;
     cardsContainer.innerHTML = '';
     
     // check if there are any cards to display
