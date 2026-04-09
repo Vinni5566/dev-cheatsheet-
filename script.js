@@ -4,6 +4,7 @@ var noResults = document.getElementById('noResults');
 var searchInput = document.getElementById('searchInput');
 var filterButtons = document.querySelectorAll('.filter-btn');
 var clearBtn = document.getElementById('clearBtn');
+var backToTopBtn = document.getElementById('backToTop');
 
 // set snippet count badge
 var snippetBadge = document.getElementById('snippetBadge');
@@ -65,6 +66,32 @@ function initializeApp() {
     filterButtons.forEach(function(button) {
         button.addEventListener('click', handleFilter);
     });
+
+    // Back to Top functionality
+    if (backToTopBtn) {
+        var isVisible = false;
+
+        window.addEventListener('scroll', function() {
+            var shouldBeVisible = window.pageYOffset > 300;
+            
+            // Only update DOM if state changed
+            if (shouldBeVisible !== isVisible) {
+                isVisible = shouldBeVisible;
+                if (isVisible) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 }
 
 // handle search input - filters cards by title or description
