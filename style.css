@@ -341,6 +341,15 @@ body {
     font-size: 1.1rem;
 }
 
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin: 15px;
+  border-top: 1px solid #374151;
+  padding-top: 10px;
+  font-size: 15px;
+}
+
 /* 11. Responsive Design */
 @media (max-width: 768px) {
     .header h1 { font-size: 2rem; }
